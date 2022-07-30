@@ -8,76 +8,181 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Raleway:wght@200&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <script type="module" src="app.js"></script>
 </head>
 <body>
     <header>
-        <title>Badminton Courts Information Brunei</title>
+        <h1>Badminton Courts Information Brunei</h1>
+        <img class="badminton-svg" src="images/badminton-svg.svg" alt="badminton-svg">
     </header>
-    <div id="map"></div>
-    <div class="card">
-        <p>Peak BN</p>
-        <p>Website: <a href="https://www.peak.com.bn/book-badminton">Peak.Bn</a></p>
-        <p>Phone No: 2342130</p>
-        <p>Pricing: $10/hr Non-Members</p>
-        <p>Booking: Through the site / by call / walk-ins</p>
-        <p>Hours: </p>
+    <div class="main-content">
+        <div class="main-images">
+            <img src="images/menglait.jpeg" class="scroller1">
+            <img src="images/ms court.jpg" class="scroller2">
+            <img src="images/peak bn.jpg" class="scroller3">
+            <img src="images/pusat insani.jpg" class="scroller4">
+            <img src="images/scout.jpg" class="scroller5">
+        </div>
+        <div id="map"></div>
+        <div class="sortBy">
+            <button class="dropbtn">Sort By</button>
+            <div class="dropdown-content">
+                <a href="#">Price</a>
+                <a href="#">Courts</a>
+                <a href="#">Availability</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p class="placeName">Peak BN</p>
+                <p>Pricing: $10/hr Non-Members</p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: <a href="https://www.peak.com.bn/book-badminton">Peak.Bn</a></p>
+                    <a href="tel:2342130">
+                        <em>2342130</em>
+                    </a>
+                </div>
+                <div class="card-right">
+                    <p>Booking: Through the site / by call / walk-ins</p>
+                    <p>Hours: 6am - 10pm</p>
+                </div>
+            </div>
+            <div class="images">
+                <img src="/images/peak bn.jpg">
+            </div>
+        </div>
+        <div class="card menglait">
+            <div class="card-header">
+                <p class="placeName">Menglait Sports Hall / KKBS</p>
+                <p>Pricing: N/A</p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: <a href="https://www.12book.com.bn/">12Book.bn</a> Under Maintenance</p>
+                    <a href="8872103">
+                        <em>8872103</em>
+                    </a>
+                </div>
+                <div class="card-right">
+                    <p>Booking: Only through 12book</p>
+                    <p>Hours: </p>
+                </div>
+            </div>
+            <div class="images">
+                <img src="/images/menglait.jpeg" alt="menglait centre">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p class="placeName">Badminton Court 5th Floor Scout Building</p>
+                <p>Pricing: N/A</p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: No available site</p>
+                    <a href="tel: 8150974">
+                        <em>8150974</em>
+                    </a>
+                </div>
+                <div class="card-right">
+                    <p>Booking: Through Whatsapp</p>
+                    <p>Hours: </p>
+                    <p>Location: </p>
+                </div>
+            </div>
+            <div class="images">
+                <img src="images/scout.jpg" alt="scout centre">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p class="placeName">Fuzhou Basketball Court</p>
+                <p>Pricing: $10/hr Free during early mornings 7 - 10am</p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: N/A</p>
+                    <p>Phone No: N/A</p>
+                </div>
+                <div class="card-right">
+                    <p>Booking: N/A</p>
+                    <p>Hours: </p>
+                    <p>Location: </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p class="placeName">Dewan Al-Izzah</p>
+                <p>Pricing: $10/hr </p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: N/A</p>
+                    <a href="tel: 8150974">
+                        <em>8150974</em>
+                    </a>
+                </div>
+                <div class="card-right">
+                    <p>Booking: N/A</p>
+                    <p>Hours: 8am - 10pm</p>
+                    <p>Location: No.23 Spg.1273-55-21 KG Sengkurong</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p class="placeName">MS Court Fitness</p>
+                <p>Pricing: $12/hr </p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: <a href="https://www.instagram.com/mscourtfitness/?hl=en">Instagram</a></p>
+                    <a href="tel: 8624878">
+                        <em>8624878</em>
+                    </a>
+                </div>
+                <div class="card-right">
+                    <p>Booking: Text or Phone Call</p>
+                    <p>Hours: 8am - 10pm</p>
+                    <p>Location: Jalan Ikas Bandung, Kg Lugu</p>
+                </div>
+            </div>
+            <div class="images">
+                <img src="images/ms court.jpg" alt="mscourt centre">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <p class="placeName">GanRos</p>
+                <p>Pricing: $10/hr</p>
+            </div>
+            <div class="content">
+                <div class="card-left">
+                    <p>Website: <a href="">Instagram</a></p>
+                    <a href="tel:8296365 ">
+                        <em>Phone No:</em>
+                    </a>
+                </div>
+                <div class="card-right">
+                    <p>Booking: 8296365</p>
+                    <p>Hours: 8am - 9pm</p>
+                    <p>Location: Kg Jerudong</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card">
-        <p>Menglait Sports Hall / KKBS</p>
-        <p>Website: <a href="https://www.12book.com.bn/">12Book.bn</a> Under Maintenance</p>
-        <p>Phone No: 8872103</p>
-        <p>Pricing: N/A</p>
-        <p>Booking: Only through 12book</p>
-        <p>Hours: </p>
-    </div>
-    <div class="card">
-        <p>Badminton Court 5th Floor Scout Building</p>
-        <p>Website: No available site</p>
-        <p>Phone No: 8150974</p>
-        <p>Pricing: N/A</p>
-        <p>Booking: Through Whatsapp</p>
-        <p>Hours: </p>
-    </div>
-    <div class="card">
-        <p>Fuzhou Basketball Court</p>
-        <p>Website: N/A</p>
-        <p>Phone No: N/A</p>
-        <p>Pricing: $10/hr Free during early mornings 7 - 10am</p>
-        <p>Booking: N/A</p>
-        <p>Hours: </p>
-        <p>Location: </p>
-    </div>
-    <div class="card">
-        <p>Dewan Al-Izzah</p>
-        <p>Website: N/A</p>
-        <p>Phone No: 8150974</p>
-        <p>Pricing: $10/hr </p>
-        <p>Booking: N/A</p>
-        <p>Hours: 8am - 10pm</p>
-        <p>Location: No.23 Spg.1273-55-21 KG Sengkurong</p>
-    </div>
-    <div class="card">
-        <p>MS Court Fitness</p>
-        <p>Website: <a href="https://www.instagram.com/mscourtfitness/?hl=en">Instagram</a></p>
-        <p>Phone No: 8624878</p>
-        <p>Pricing: $12/hr /p>
-        <p>Booking: Text or Phone Call</p>
-        <p>Hours: 8am - 10pm</p>
-        <p>Location: Jalan Ikas Bandung, Kg Lugu</p>
-    </div>
-    <div class="card">
-        <p>GanRos</p>
-        <p>Website: <a href="https://www.instagram.com/mscourtfitness/?hl=en">Instagram</a></p>
-        <p>Phone No: 8296365</p>
-        <p>Pricing: $10/hr /p>
-        <p>Booking: 8296365</p>
-        <p>Hours: 8am - 9pm</p>
-        <p>Location: Kg Jerudong</p>
-    </div>
-    
-
+    <footer>
+        <p>Welcome to contribute!</p>
+        <a href="https://github.com/Leaf8910/Badminton-Page">
+            <img class="github-logo" src="/images/github-logo.svg" alt="github-logo">
+        </a>  
+        </footer>
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX062GMiRBIyJeDANyEezqtVsqyc4XMaU&callback=initMap"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX062GMiRBIyJeDANyEezqtVsqyc4XMaU&callback=initMap&v=weekly" defer ></script>
