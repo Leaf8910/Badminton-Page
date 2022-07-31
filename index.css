@@ -3,9 +3,11 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 191, 191);
+  background: rgb(158,238,216);
+  background: linear-gradient(90deg, rgba(158,238,216,1) 0%, rgba(191,191,225,1) 54%, rgba(0,212,255,1) 100%);
   justify-content: center;
   flex-wrap: nowrap;
+  overflow-x: hidden;
 }
 
 #map {
@@ -16,11 +18,44 @@ body {
 }
 
 .main-images {
-  /* height: 150px;
-  overflow: hidden; */
+  width: 100vw;
+  height: 50vh;
+  /* overflow: hidden; */
+  position: static;
+  
 }  
 
+.scroller1 {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+  object-position: middle;
+  /* height: 20vh;
+  overflow: hidden; */
+}
 
+.scroller2, 
+.scroller3, 
+.scroller4, 
+.scroller5 {
+  display: none;
+}
+
+.right-arrow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  top: 270px;
+}
+
+.left-arrow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 270px;
+  left: 30px;
+}
 
 .main-content {
   display: flex;
@@ -42,16 +77,30 @@ body {
 header {
   display: flex;
   align-items: center;
-  gap: 1em;
+  justify-content: space-evenly;
   width: 100vw;
-  padding-left: 10%;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 65%);
+  background: rgb(158,238,216);
+  background: linear-gradient(90deg, rgba(158,238,216,1) 0%, rgba(191,191,225,1) 54%, rgba(0,212,255,1) 100%);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.header-right {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .badminton-svg {
   width: 3em;
   height: 6em;
+}
+
+.dates {
+  color: black;
 }
 
 .card {
@@ -64,15 +113,17 @@ header {
     border-radius: 20px;
     /* padding-left: 5px; */
     overflow: hidden;    
-
+    -webkit-box-shadow: 11px 10px 12px 5px #000000; 
+    box-shadow: 11px 10px 12px 5px #000000; 
 }
 
 .card-header {
   display: block;
-  /* justify-content: space-around; */
   align-items: center;
   background-color: grey;
-  padding: 1em;
+  padding-left: 1em;
+  max-height: 4em;
+  overflow: hidden;
 }
 
 .content {
@@ -81,8 +132,13 @@ header {
   padding: 1em;
 }
 
+.images {
+  display: flex;
+  justify-content: center;
+}
 
-img {
+.images > img {
+  border-radius: 10px;
   width: 18em;
   height: 9em;
 }
@@ -92,10 +148,14 @@ a {
 }
 
 .placeName {
-  font-size: 1.8  em;
+  font-size: 1.8em;
   font-weight: bolder;
 }
 
+.insta {
+  width: 2em;
+  height: 2em;
+}
 
 .dropbtn {
   background-color: #2a3ed6;
@@ -140,7 +200,28 @@ a {
   background-color: #3e8e41;
 }
 
+.coming-soon {
+  width: 100vw;
+  height: 10vw;
+  background-color: rgb(19, 17, 17);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+}
+
+.footer-news {
+  width: 100vw;
+  background-color: rgb(18, 18, 18);
+  max-height: 200px;
+  color: black;
+}
+
 footer {
+  font-weight: bold;
   width: 100vw;
   display: flex;
   align-items: center;
