@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badminton courts in Brunei</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <script type="module" src="app.js"></script>
     <script type="module" src="app2.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/styles/v1/leaf891/cl6bldccm000514qnwsj5rdtb/wmts?access_token=pk.eyJ1IjoibGVhZjg5MSIsImEiOiJjbDZiYmIxMWsxYXBjM2RwM3g5Y2R5ZTVzIn0._3mYOHsO_qd2XL7DfwbNaA">
 </head>
 <body>
     <header>
         <div class="header-left">
-            <h1>Badminton Courts Information Brunei</h1>
+            <h1>Badminton Courts Brunei</h1>
             <img class="badminton-svg" src="images/badminton-svg.svg" alt="badminton-svg">
         </div>
         <div class="header-right">
@@ -26,11 +28,15 @@
                     date = new Date().toLocaleDateString();
                     document.write(date);
                 </script>
-            </div>
+            </div>  
         </div>
     </header>
     <div class="main-content">
         <div class="wrapper">
+            <div class="wrapper-text">
+                <em class="main-wrapper">Badminton<span class="type-animation">Badminton</span>Website</em>
+                <em class="bottom-wrapper">The Way Its Meant To Be Played.</em>
+            </div>
             <div class="images-area">
               <img src="images/badminton head 20.jfif" alt="image" class="firstImage">
               <img src="images/badminton head 7.JPG" alt="image">
@@ -54,8 +60,9 @@
             </div>
             <div class="pagination-area">
             </div>
-          </div>
+        </div>
         <div id="map"></div>
+        <div class="mapBox"></div>
         <div class="sortBy">
             <button class="dropbtn">Sort By</button>
             <div class="dropdown-content">
@@ -78,7 +85,10 @@
                 </div>
                 <div class="card-right">
                     <p class="text-key">BOOKING:</p><p>Through the site / by call / walk-ins</p>
-                    <p>HOURS: 6am - 10pm</p>
+                    <p>HOURS: </p> <p class="peak-hours"></p>
+                    <div class="current-hours">
+                        <p>Currently: </p><p class="currently-peak"></p>
+                    </div>
                 </div>
             </div>
             <div class="images">
@@ -164,6 +174,9 @@
                     <p>BOOKING: N/A</p>
                     <p>HOURS: 8am - 10pm</p>
                     <p>LOCATION: No.23 Spg.1273-55-21 KG Sengkurong</p>
+                    <div class="current-hours">
+                        <p>CURRENTLY: </p><p class="currently-dewan"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,6 +196,9 @@
                     <p>BOOKING: Text or Phone Call</p>
                     <p>HOURS: 8am - 10pm</p>
                     <p>LOCATION: Jalan Ikas Bandung, Kg Lugu</p>
+                    <div class="current-hours">
+                        <p>CURRENTLY: </p><p class="currently-mscourt"></p>
+                    </div>
                 </div>
             </div>
             <div class="images">
@@ -239,7 +255,12 @@
                 </div>
             </div>
         </div>
-        <div class="coming-soon">Coming Soon Other Districts <img class="badminton-svg" src="images/badminton-svg.svg" alt="badminton-svg"></div>
+        <div class="coming-soon">
+            <div>Coming Soon Other Districts 
+                <img class="badminton-svg" src="images/badminton-svg.svg" alt="badminton-svg">
+            </div>
+            <p>Best viewed at 1920×1080 screen resolution</p>
+        </div>
     </div>
 
     <footer>
