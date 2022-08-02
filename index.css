@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@0;1&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -30,13 +31,18 @@ body {
 
 #map {
     height: 30vh;
-    width: 90vw;
+    width: 100vw;
     margin: auto;
     padding: auto;
+}
 
+.mapBox {
+  width: 100vw;
+  height: 500px;
 }
 
 .wrapper{
+  font-family: 'Prata', serif;
   width: 600px;
   height: 28em;
   position: relative;
@@ -44,13 +50,35 @@ body {
   box-shadow: 0 0 80px var(--wrapper-shadow-c);
 }
 
+.main-wrapper {
+  font-size: 1.8em;
+  color: white;
+}
+
+.bottom-wrapper {
+
+}
+
+.wrapper-text {
+  font-size: 3em;
+  color:#2f8122;
+  font-weight: bold;
+  flex-wrap: nowrap;
+  max-width: 50vw;
+  padding-left: 1em;
+  position: absolute;
+  right: 90%;
+}
+
 .images-area{
   width: 80vw;
-  height: 50vh;
+  height: 60vh;
   position: relative;
   display: flex;
   scrollbar-width: none;
   /* overflow: visible; */
+  -webkit-mask-image: linear-gradient(to left, black 10%, transparent 90%);
+  mask-image: linear-gradient(to left, black 10%, transparent 90%);
 }
 .images-area img{
   width: 100%;
@@ -155,7 +183,7 @@ header {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .header-right {
@@ -307,11 +335,15 @@ a {
   background-color: rgb(19, 17, 17);
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-content: center;
   font-weight: bold;
   letter-spacing: 0.2em;
   font-size: 1.3em;
+  padding-bottom: 3.5em;
+  gap: 1em;
 }
 
 .footer-news {
@@ -346,5 +378,32 @@ footer {
   .card {
     flex-wrap: nowrap;
     width: 80vw;
+  }
+  .images-area {
+    height: 50vw;
+  }
+  .wrapper {
+    /* height: 14em; */
+    height: 45vw;
+  }
+  .wrapper-text {
+    font-size: 1.5em;
+    left: 3em;
+    /* display: none; */
+  }
+  .header-left{
+    padding-left: 0.8em;
+  }
+  .images-area {
+    -webkit-mask-image: none;
+  }
+  .coming-soon {
+    font-size: 0.5em; 
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .wrapper-text {
+    right: 50%;
   }
 }
