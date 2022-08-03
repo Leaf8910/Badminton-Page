@@ -61,7 +61,7 @@ body {
 
 .wrapper-text {
   font-size: 3em;
-  color:#2f8122;
+  color:#41af31;
   font-weight: bold;
   flex-wrap: nowrap;
   max-width: 50vw;
@@ -174,7 +174,8 @@ header {
   letter-spacing: 0.15em;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-left: 3rem;
   width: 100vw;
   background: rgb(158,238,216);
   background: linear-gradient(90deg, rgba(158,238,216,1) 0%, rgba(191,191,225,1) 54%, rgba(0,212,255,1) 100%);
@@ -206,12 +207,13 @@ header {
     display: block;  
     font-weight: bold;
     background-color: rgb(144, 144, 155);
-    color: black;
+    color: rgb(255, 255, 255);
     border: 1px solid black;
     border-radius: 10px;
     overflow: hidden;    
     -webkit-box-shadow: 11px 10px 12px 5px #000000; 
     box-shadow: 11px 10px 12px 5px #000000; 
+    letter-spacing: 0.09rem;
 }
 
 .card-header {
@@ -221,6 +223,16 @@ header {
   padding-left: 1em;
   max-height: 4em;
   overflow: hidden;
+}
+
+.current-hour {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current {
+  display: flex;
+  padding-right: 5rem;
 }
 
 .text-key {
@@ -400,6 +412,16 @@ footer {
   .coming-soon {
     font-size: 0.5em; 
   }
+  .placeName {
+    font-size: 1.4em;
+  }
+  .current-hour {
+    font-size: 0.8em;
+    padding-right: 1rem;
+  }
+  .header-right {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
@@ -407,3 +429,4 @@ footer {
     right: 50%;
   }
 }
+
