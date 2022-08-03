@@ -208,6 +208,9 @@ setInterval(() => {
 let peakTime = document.querySelector(".currently-peak");
 let dewanTime = document.querySelector(".currently-dewan");
 let msTime = document.querySelector(".currently-mscourt");
+let centrepoint = document.querySelector(".currently-centrepoint");
+let fuzhou = document.querySelector(".currently-fuzhou");
+let ganros = document.querySelector(".currently-ganros");
 var current = new Date();
 var hour = current.getHours();
 var day = current.getDay();
@@ -216,33 +219,91 @@ console.log(hour);
 console.log("current hour " + current.getHours());
 console.log("Current day " + current.getDay()); // 0 is Sunday
 
-if (hour > 6 && hour < 22) {
-  peakTime.innerHTML = "OPEN";
-  peakTime.style.color = "green";
-  console.log("OPEN")
-} else if (hour < 6 && hour > 22){
-  peakTime.innerHTML = "CLOSED";
-  peakTime.style.color = "red";
-  console.log("CLOSED")
-} else {
-  peakTime.innerHTML = "???"
-  console.log("WHAT")
+// used 5 and 22 because truthy flasy operators >=
+function sixTen(){
+  if (hour > 5 && hour < 22) {
+    peakTime.innerHTML = "OPEN";
+    peakTime.style.color = "#2f8122";
+    console.log("OPEN")
+  } else if (hour < 6 || hour > 22){
+    peakTime.innerHTML = "CLOSED";
+    peakTime.style.color = "red";
+    console.log("CLOSED")
+  } else {
+    peakTime.innerHTML = "???"
+    console.log("WHAT")
+  }
 }
 
-if (hour > 6 && hour < 22) {
-  dewanTime.innerHTML = "OPEN";
-  msTime.innerHTML = "OPEN";
-  dewanTime.style.color = "green";
-  msTime.style.color = "green";
-  console.log("OPEN")
-} else if (hour < 6 && hour > 22){
-  dewanTime.innerHTML = "CLOSED";
-  msTime.innerHTML = "CLOSED";
-  dewanTime.style.color = "red";
-  msTime.style.color = "red";
-  console.log("CLOSED")
-} else {
-  dewanTime.innerHTML = "???"
-  msTime.innerHTML = "???"
-  console.log("WHAT")
+function eightTen(){
+  if (hour > 7 && hour < 23) {
+    dewanTime.innerHTML = "OPEN";
+    msTime.innerHTML = "OPEN";
+    dewanTime.style.color = "#2f8122";
+    msTime.style.color = "#2f8122";
+    console.log("OPEN")
+  } else if (hour < 8 || hour > 22){
+    dewanTime.innerHTML = "CLOSED";
+    msTime.innerHTML = "CLOSED";
+    dewanTime.style.color = "red";
+    msTime.style.color = "red";
+    console.log("CLOSED")
+  } else {
+    dewanTime.innerHTML = "???"
+    msTime.innerHTML = "???"
+    console.log("WHAT")
+  }
 }
+
+function sevenTwelve(){
+  if (hour > 6 && hour < 24) {
+    centrepoint.innerHTML = "OPEN";
+    centrepoint.style.color = "#2f8122";
+    console.log("OPEN")
+  } else if (hour < 7 || hour > 24){
+    centrepoint.innerHTML = "CLOSED";
+    centrepoint.style.color = "red";
+    console.log("CLOSED")
+  } else {
+    console.log("WHAT")
+  }
+}
+
+function sevenTen(){
+  if (hour > 6 && hour < 23) {
+    centrepoint.innerHTML = "OPEN";
+    fuzhou.innerHTML = "OPEN";
+    centrepoint.style.color = "#2f8122";
+    fuzhou.style.color = "#2f8122";
+    console.log("OPEN")
+  } else if (hour < 7 || hour > 22){
+    centrepoint.innerHTML = "CLOSED";
+    fuzhou.innerHTML = "CLOSED";
+    centrepoint.style.color = "red";
+    fuzhou.style.color = "red";
+    console.log("CLOSED")
+  } else {
+    console.log("WHAT")
+  }
+}
+
+function eightNine(){
+  if (hour > 7 && hour < 22) {
+    ganros.innerHTML = "OPEN";
+    ganros.style.color = "#2f8122";
+    console.log("OPEN")
+  } else if (hour < 8 || hour > 21){
+    ganros.innerHTML = "CLOSED";
+    ganros.style.color = "red";
+    console.log("CLOSED")
+  } else {
+    console.log("WHAT")
+  }
+}
+
+
+sixTen();
+eightTen();
+sevenTwelve();
+sevenTen();
+eightNine();
