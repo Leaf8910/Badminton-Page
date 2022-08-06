@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -177,8 +180,8 @@ header {
   justify-content: space-between;
   padding-left: 3rem;
   width: 100vw;
-  background: rgb(158,238,216);
-  background: linear-gradient(90deg, rgba(158,238,216,1) 0%, rgba(191,191,225,1) 54%, rgba(0,212,255,1) 100%);
+  background-color: #008BFF;
+  /* background: linear-gradient(90deg, rgba(158,238,216,1) 0%, rgba(191,191,225,1) 54%, rgba(0,212,255,1) 100%); */
 }
 
 .header-left {
@@ -200,6 +203,28 @@ header {
 .dates {
   color: black;
 }
+
+.custom-shape-divider-top-1659562864 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1659562864 svg {
+  position: relative;
+  display: block;
+  width: calc(116% + 1.3px);
+  height: 84px;
+}
+
+.custom-shape-divider-top-1659562864 .shape-fill {
+  fill: #008BFF;
+}
+
+
 
 .card {
     font-family: 'Red Hat Display', sans-serif;
@@ -339,6 +364,33 @@ a {
 
 .sortBy:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+.form-email {
+  font-family: 'Fira Code', monospace;
+}
+
+input 
+}
+
+.form-input {
+  height: 160px;
+  border-bottom: 1px solid;
+  padding: 10px;
+  background-color: rgb(49, 53, 55);
+}
+
+.input-name, .input-email {
+  padding: 10px;
+  border-bottom: 1px solid;
+  background-color: rgb(49, 53, 55);
+}
+
+.submit-btn {
+  background-color: rgb(0, 0, 0);
+  color: rgb(203, 198, 191);
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .coming-soon {
