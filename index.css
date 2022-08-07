@@ -42,7 +42,7 @@ body {
   padding-top: 10em;
 }
 .marker {
-  background-image: url('icons-place-marker.gif');
+  background-image: url('images/icons-place-marker.gif');
   background-size: cover;
   width: 50px;
   height: 50px;
