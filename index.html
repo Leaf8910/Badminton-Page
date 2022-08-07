@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
-    <script type="module" src="app.js"></script>
     <script type="module" src="app2.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/styles/v1/leaf891/cl6bldccm000514qnwsj5rdtb/wmts?access_token=pk.eyJ1IjoibGVhZjg5MSIsImEiOiJjbDZiYmIxMWsxYXBjM2RwM3g5Y2R5ZTVzIn0._3mYOHsO_qd2XL7DfwbNaA">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
     <header>
@@ -39,7 +39,7 @@
     <div class="main-content">
         <div class="wrapper">
             <div class="wrapper-text">
-                <em class="main-wrapper">Badminton<span class="type-animation">Badminton</span>Website</em>
+                <em class="main-wrapper">The<span class="type-animation">Badminton</span>Website</em>
                 <em class="bottom-wrapper">The Way Its Meant To Be Played.</em>
             </div>
             <div class="images-area">
@@ -67,7 +67,120 @@
             </div>
         </div>
         <div id="map"></div>
-        <div class="mapBox"></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoibGVhZjg5MSIsImEiOiJjbDZiYmIxMWsxYXBjM2RwM3g5Y2R5ZTVzIn0._3mYOHsO_qd2XL7DfwbNaA';
+
+            const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v11',
+              center: [114.94806, 4.94029],
+              zoom: 8
+            });
+
+            const geojson = {
+              type: 'FeatureCollection',
+              features: [
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [114.92915804359032, 4.937619409787599]
+                  },
+                  properties: {
+                    title: 'Peak',
+                    description: 'Peak Bn Court'
+                  }
+                },
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [114.91536174194786 , 4.907510702105883]
+                  },
+                  properties: {
+                    title: 'Centrepoint',
+                    description: 'Centrepoint Hotel Court'
+                  }
+                },
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [ 114.92301815700068, 4.91138322962527]
+                  },
+                  properties: {
+                    title: 'Menglait',
+                    description: 'Menglait Sports Hall / KKBS'
+                  }
+                },
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [114.95317935338407, 4.985151761431312]
+                  },
+                  properties: {
+                    title: 'Fuzhou',
+                    description: 'Fuzhou Basketball Court'
+                  }
+                },
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [114.80337852824768, 4.867643040176775]
+                  },
+                  properties: {
+                    title: 'MS Court',
+                    description: 'MS COURT Fitness'
+                  }
+                },
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [114.90176423687105, 4.900450520113434]
+                  },
+                  properties: {
+                    title: 'Scout Centre',
+                    description: 'Badminton Scout Building'
+                  }
+                },
+                {
+                  type: 'Feature',
+                  geometry: {
+                    type: 'Point',
+                    coordinates: [114.92863082391058, 4.918223425330369]
+                  },
+                  properties: {
+                    title: 'JKR ',
+                    description: 'JKR Indoor Sports Complex'
+                  }
+                },
+              ]
+            };
+
+            // add markers to map
+            for (const feature of geojson.features) {
+              // create a HTML element for each feature
+              const el = document.createElement('div');
+              el.className = 'marker';
+            
+              // make a marker for each feature and add to the map
+              new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+            
+              // make a marker for each feature and add it to the map
+              new mapboxgl.Marker(el)
+                        .setLngLat(feature.geometry.coordinates)
+                        .setPopup(
+                          new mapboxgl.Popup({ offset: 25 }) // add popups
+                            .setHTML(
+                              `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                            )
+                        )
+              .addTo(map);
+            }
+        </script>
         <div class="sortBy">
             <button class="dropbtn">Sort By</button>
             <div class="dropdown-content">
@@ -283,13 +396,15 @@
             </div>
         </div>
         <div class="form-email">
-            <h2>Send me a message! Got a question,</br> comment, changes or additional information, </br>or just want
-                to say hello? Go ahead.</h2>
+            <h2>Send me a message!</h2><h3> Got a question, comment, changes, </br>additional information, or just </br>want
+                to say hello? Go ahead.</h3>
             <form action="mailto:cheetahbrunei@outlook.com" method="post" enctype="text/plain">
-                Name:<br>
-                <input class="input-name" type="text" name="name" placeholder="Enter your name"><br>
-                E-mail:<br>
-                <input class="input-email" type="text" name="mail" placeholder="Enter your email"><br>
+                <div class="top-form">
+                    Name:<br>
+                    <input class="input-name" type="text" name="name" placeholder="Enter your name"><br>
+                    E-mail:<br>
+                    <input class="input-email" type="text" name="mail" placeholder="Enter your email"><br>
+                </div>
                 Comment:<br>
                 <input class="form-input" type="text" name="comment" size="80" placeholder="Hi, theres a correction for the closing time of the centrepoint court!"><br><br>
                 <input class="submit-btn" type="submit" value="Send">
