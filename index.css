@@ -378,11 +378,39 @@ a {
   background-color: #3e8e41;
 }
 
+
+.local-groups {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20em;
+  /* background-color: #000000; */
+}
+
+.card-locals {
+  max-width: 20em;
+  background-color: #d5d4d4;
+  padding: 2em;
+  border: solid 1px black;
+}
+
+.local-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.local-header {
+
+}
+
 .form-email {
   font-family: 'Fira Code', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 650px;
 }
 
 form {
