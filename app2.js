@@ -184,6 +184,31 @@ eightTen()
 sevenTen()
 sixNine()
 eightNine()
-openClose()
 
 
+
+
+let weather = document.querySelector(".weather");
+let cityName = "brunei";
+let weatherIcon = document.querySelector(".weather-icon");
+let currentTemp = document.querySelector(".current-temp");
+
+//Get the API by City Name
+getWeatherByName = (cityName) => {
+  weather.innerText = "Loading";
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=6e69e26d2dbce83a2cd91866c8eab755`)
+      .then((res) => res.json())
+      .then((data) => showWeather(data))
+      .catch(() => {
+          console.log("weatherError")
+      }
+  )
+};
+
+
+showWeather = (data) => {
+  currentTemp.innerHTML = `${temperature}&#176C`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+}
+
+window.addEventListener("load", getWeatherByName);
