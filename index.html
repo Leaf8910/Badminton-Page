@@ -212,13 +212,34 @@
                 </div>
                 <div class="card-right">
                     <p class="text-key">BOOKING:</p><p>Through the site / by call / walk-ins</p>
-                    <p>HOURS: </p> <p class="peak-hours"></p>
-                    <p>LOCATION: Next to the Airport / RBRC</p>
+                    <p>HOURS: </p> <p class="peak-hours">6AM - 10PM</p>
+                    <p class="location-peak"></p>
+                    <span id="dots">...</span>
                 </div>
             </div>
             <div class="images">
-                <img src="/images/peakbn.jpg">
-                <a href="#" class="showMore">Show more</a>
+                <img src="/images/peakbn.jpg" class="peakpic">
+                <a href="#" class="showMore1" onclick="buttonFunction()">Show more</a>
+                <script>
+                    function buttonFunction() {
+                      var dots = document.getElementById("dots");
+                      var btnText = document.querySelector(".showMore1");
+                      var locpeak = document.querySelector(".location-peak");
+                      var peakhrs = document.querySelector(".peak-hours");
+
+                      if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "Read more";
+                        locpeak.style.display = "none";
+                        peakhrs.style.display = "none";
+                      } else {
+                        dots.style.display = "none";
+                        btnText.innerHTML = "Read less";
+                        locpeak.innerHTML = "LOCATION: Next to the Airport / RBRC";
+                        peakhrs.style.display = "inline";
+                      }
+                    }
+                </script>
             </div>
         </div>
         <div class="card menglait">
@@ -412,11 +433,29 @@
                     <p>BOOKING: </p>
                     <p>HOURS: 8am - 10pm</p>
                     <p>LOCATION: The Centrepoint Hotel</p>
-                    <p>NOTES: Only a good idea to apply for membership if you live in the area. <br>$35 a month per person. Unlimited use of gym and pool. <br>Other Facilities available to members</p>
+                    <div>NOTES: Only a good idea to apply for membership if you live in the area. </div>
+                    <p class="notes-takaful"></p>
+                    <span id="dots-tk">...</span>
                 </div>
                 <div class="images">
-                    <!-- <img src=""> -->
-                    <a href="#" class="showMore">Show more</a>
+                    <a href="#" class="showMore-tk" onclick="buttonsFunction()">Show more</a>
+                    <script>
+                        function buttonsFunction() {
+                          var dots = document.getElementById("dots-tk");
+                          var btnTxt = document.querySelector(".showMore-tk");
+                          var notesTK = document.querySelector(".notes-takaful");
+    
+                          if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            btnTxt.innerHTML = "Read more";
+                            notesTK.innerHTML = "none";
+                          } else {
+                            dots.style.display = "none";
+                            btnTxt.innerHTML = "Read less";
+                            notesTK.textContent = " $35 a month per person. Unlimited use of gym and pool. Other Facilities available to members";
+                          }
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -431,7 +470,7 @@
             </div>
         </div>
         <div class="local-groups">
-            <h2>Find a local community for tournaments to join or practice, interact and play with today!</h2>
+            <h2>Find a local community to join, compete in tournaments ,practice, interact and play with today!</h2>
             <div class="local-cards">
                 <div class="card-locals smash">
                     <div class="local-header">
@@ -455,8 +494,10 @@
             </div>
         </div>
         <div class="form-email">
-            <h2>Send me a message!</h2><h3> Got a question, comment, changes, </br>additional information, or just </br>want
-                to say hello? Go ahead.</h3>
+            <div class="top-message">
+                <h2>Send me a message!</h2><h3> Got a question, comment, changes, </br>additional information, or just </br>want
+                    to say hello? Go ahead.</h3>
+            </div>
             <form action="mailto:cheetahbrunei@outlook.com" method="post" enctype="text/plain">
                 <div class="top-form">
                     Name:<br>
@@ -464,13 +505,15 @@
                     E-mail:<br>
                     <input class="input-email" type="text" name="mail" placeholder="Enter your email"><br>
                 </div>
-                Comment:<br>
-                <input class="form-input" type="text" name="comment" size="80" placeholder="Hi, theres a correction for the closing time of the centrepoint court!"><br><br>
-                <input class="submit-btn" type="submit" value="Send">
+                <div class="bottom-form">
+                    Comment:<br>
+                    <input class="form-input" type="text" name="comment" size="80" placeholder="Hi, theres a correction for the closing time of the centrepoint court!"><br><br>
+                    <input class="submit-btn" type="submit" value="Send">
+                </div>
             </form>
         </div>
         <div class="coming-soon">
-            <div>Coming Soon Other Districts 
+            <div>Coming Soon Other Districts <img class="badminton-svg" src="images/badminton-svg.svg" alt="badminton-svg">
             </div>
             <p>Best viewed at 1920×1080 screen resolution</p>
         </div>
