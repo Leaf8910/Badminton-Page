@@ -270,6 +270,7 @@ header {
 .current {
   display: flex;
   padding-right: 5rem;
+  padding-bottom: 1em;
 }
 
 .text-key {
@@ -293,11 +294,18 @@ header {
   border-radius: 10px;
   width: 18em;
   height: 9em;
+  transition: transform .4s;
 }
 
-.showMore {
+.images > img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+.showMore, .showMore1 , .showMore-tk{
   background-color:#7a90ff;
-	border-radius: 2px;
+	border-radius: 10px;
 	border:0.5px solid #000000;
 	display:inline-block;
 	cursor:pointer;
@@ -312,8 +320,10 @@ header {
   align-self:baseline;
 }
 
-.showMore:hover {
-  background-color: #7a90ff;
+.showMore:hover, 
+.showMore1:hover, 
+.showMore-tk:hover{
+  background-color: #aeb8f3;
 }
 
 .showMore:active {
@@ -381,11 +391,17 @@ a {
 
 .local-groups {
   width: 100%;
-  height: 40vh;
   display: flex;
+  font-weight: bold;
   flex-direction: column;
-  padding-left: 20em;
-  /* background-color: #000000; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.local-groups > h2 {
+  padding-bottom: 1em;
+  max-width: 40vw;
 }
 
 .card-locals {
@@ -401,16 +417,13 @@ a {
   gap: 2em;
 }
 
-.local-header {
-
-}
-
 .form-email {
   font-family: 'Fira Code', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 650px;
+  text-align: center;
 }
 
 form {
@@ -487,24 +500,24 @@ footer {
   height: 2.5em;
 }
 
-@media only screen and (min-width: 300px) {
-  .form-email {
-    /* position: relative; */
-    left: 9em;
-  }
-}
+
 
 
 @media only screen and (max-width: 600px) {
   .main-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap:  wrap;
     align-items: center;
   }
   .card {
     flex-wrap: nowrap;
-    width: 80vw;
+    width: 90vw;
+    /* overflow: scroll; */
+  }
+  .images {
+    flex-direction: column;
   }
   .images-area {
     height: 50vw;
@@ -539,11 +552,49 @@ footer {
   }
   .form-email {
     position: relative;
-    left: 6em;
+    /* left: 6em; */
   }
-  .form-email > h2, h3 {
-    font-size: 1em;
+  .top-message {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    padding-left: 1em;
+  }
+  .top-form {
+    /* font-size: 1em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 140vw;
     padding-right :200px;
+  }
+  .bottom-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  input {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .local-groups {
+    /* white-space: normal; */
+    display: flex;
+    flex-direction: column;
+  }
+  .local-groups > h2 {
+    max-width: 90vw;;
+  }
+  .local-cards {
+    flex-direction: column;
   }
 }
 
@@ -554,6 +605,7 @@ footer {
     padding: 0; */
     max-width: 50vw;
     right: 90%;
+    padding-left: 6em;
   }
   .card-header{
     max-height: 8em;
@@ -563,23 +615,6 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1440px) {
-  .wrapper-text {
-    /* font-size: 1rem;
-    padding: 0; */
-    max-width: 50vw;
-    right: 90%;
-  }
-  
-  .main-wrapper {
-    
-  }
-}
 
-@media only screen and (max-width: 1980px) {
-  .wrapper-text {
-    right: 50%;
-  }
-}
 
 
